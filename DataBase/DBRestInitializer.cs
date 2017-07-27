@@ -7,8 +7,15 @@ using System.Data.Entity;
 
 namespace DataBase
 {
+    /// <summary>
+    /// This class contains databse initialize method with initial data
+    /// </summary>
     public class DBRestInitializer : CreateDatabaseIfNotExists<DBRest>
     {
+        /// <summary>
+        /// This method override virtual method Seed() for initital data adding
+        /// </summary>
+        /// <param name="context"></param>
         protected override void Seed(DBRest context)
         {
             User user1 = new User {NickName = "Sergio", FullName = "Sergey"};

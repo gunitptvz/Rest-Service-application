@@ -7,6 +7,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DataBase
 {
+    /// <summary>
+    /// This class contains User entity with properties
+    /// </summary>
     public class User
     {
         [Key]

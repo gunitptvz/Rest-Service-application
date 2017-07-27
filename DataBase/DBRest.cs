@@ -4,6 +4,9 @@ namespace DataBase
     using System.Data.Entity;
     using System.Linq;
 
+    /// <summary>
+    /// This class contains static and customer database costructors for initialize database
+    /// </summary>
     public class DBRest : DbContext
     {
         static DBRest()

@@ -8,6 +8,9 @@ using Contract;
 
 namespace Rest_Service
 {
+    /// <summary>
+    /// Server class with connection parameters
+    /// </summary>
     class Server
     {
         static void Main(string[] args)
@@ -15,12 +18,14 @@ namespace Rest_Service
             Console.Title = "SERVER";
 
             ServiceHost host = new ServiceHost(typeof(MyService));
-            host.AddServiceEndpoint(typeof (IContract), new BasicHttpBinding(), new Uri("http://localhost:150/IContract"));
+
+            host.AddServiceEndpoint(typeof(IContract), new BasicHttpBinding(), new Uri("http://localhost:150/IContract"));
 
             host.Open();
             Console.WriteLine("The host opened!");
 
             Console.ReadKey();
+
             host.Close();
         }
     }
